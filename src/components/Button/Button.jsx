@@ -1,4 +1,4 @@
-import { ButtonStyle, WrapperButton } from './Button.styles';
+import { ButtonStyle, WrapperButton } from './Button.styled';
 
 
 const Button = ({ onClickRender }) => (

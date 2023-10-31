@@ -1,4 +1,4 @@
-import { Gallery } from './ImageGallery.styles';
+import { Gallery } from './ImageGallery.styled';
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 
 const ImageGallery = ({ photos, onClickImageItem }) => (
