@@ -7,9 +7,14 @@ import {
   SearchFormInput,
 } from './Searchbar.styles';
 
-const Searchbar = ({ onSubmitSearchBar }) => (
+const Searchbar = () => {
+  const handleSubmit = event => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    return form;
+  };
   <SearchbarHeader>
-    <SearchForm onSubmit={onSubmitSearchBar}>
+    <SearchForm onSubmit={handleSubmit}>
       <SearchFormButton type="submit">
         <SearchFormButtonLabel>Search</SearchFormButtonLabel>
         <BiSearch style={{ margin: 10, height: 20, width: 20 }} />
@@ -21,10 +26,10 @@ const Searchbar = ({ onSubmitSearchBar }) => (
         autoComplete="off"
         autoFocus
         placeholder="Search images
-            and photos"
+          and photos"
       ></SearchFormInput>
     </SearchForm>
-  </SearchbarHeader>
-);
+  </SearchbarHeader>;
+};
 
 export default Searchbar;

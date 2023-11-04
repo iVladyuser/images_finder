@@ -27,9 +27,9 @@ function App() {
     addPhotoPage(search, page);
   }, [search, page]);
 
-  const onSubmitSearchBar = event => {
-    event.preventDefault();
-    const form = event.currentTarget;
+  const onSubmitSearchBar = ({form}) => {
+    // event.preventDefault();
+    // const form = event.currentTarget;
     const searchValue = form.search.value
       .trim()
       .toLowerCase()
