@@ -27,14 +27,8 @@ function App() {
     addPhotoPage(search, page);
   }, [search, page]);
 
-  const onSubmitSearchBar = ({form}) => {
-    // event.preventDefault();
-    // const form = event.currentTarget;
-    const searchValue = form.search.value
-      .trim()
-      .toLowerCase()
-      .split(' ')
-      .join('+');
+  const onSubmitSearchBar = value => {
+    const searchValue = value.trim().toLowerCase().split(' ').join('+');
 
     if (searchValue === '') {
       Notify.info('Enter your request, please!', paramsForNotify);
